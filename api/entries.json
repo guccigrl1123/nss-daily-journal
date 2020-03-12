@@ -1,0 +1,25 @@
+{
+    "entries" : [
+        {
+            "id" : 1,
+            "date": "07/24/2025",
+            "concept": "HTML & CSS",
+            "entry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
+            "mood": "Ok"
+        },
+        {
+            "id" : 2,
+            "date": "02/26/20",
+            "concept": "Git & Github",
+            "entry": "Through the group project Hello, World, we learned how to save and share our code with others.",
+            "mood": "Frustrated"
+        },
+        {
+            "id" : 3,
+            "date": "02/28/20",
+            "concept": "Javascript & EventListeners",
+            "entry": "We learned how to automate Event Listeners.",
+            "mood": "Pretty good"
+        }
+    ]
+}
