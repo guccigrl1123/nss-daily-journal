@@ -1,5 +1,15 @@
 let journalCollection = []
 
+const eventHub = document.querySelector(".container")
+
+const dispatchStateChangeEvent = () => {
+    const entryStateChangedEvent = new CustomEvent("entryStateChanged")
+
+    eventHub.dispatchEvent(entryStateChangedEvent)
+}
+// added 3/17
+export const useEntries= () => journalCollection.slice()
+
 export const getEntries = () => {
   return fetch("http://localhost:3000/entries") 
     .then(response => response.json())  // Parse as JSON
@@ -7,6 +17,18 @@ export const getEntries = () => {
         console.table(entries)
      journalCollection= entries
     })
+}
+
+export const recordJournalEntry = entry => {
+    return fetch('http://localhost:3000/entries', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(entry)
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
 }
 
 export const useJournalEntries = () => {
