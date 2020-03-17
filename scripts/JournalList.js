@@ -1,28 +1,46 @@
 
-import {useJournalEntries} from "./JournalDataProvider.js"
+import {useJournalEntries, useEntries, getEntries} from "./JournalDataProvider.js"
 import Journal from "./Journal.js"
 
-// Import `useFish` from the data provider module
+
+const contentTarget = document.querySelector(".journalEntries")
+const eventHub = document.querySelector(".container")
+
+    
+
+let visibility = true
+
+eventHub.addEventListener("allEntriesClicked", customEvent => {
+    visibility = !visibility
+    console.log("taco")
+    if (visibility) {
+        console.log("visibility===true")
+        contentTarget.classList.remove("invisible")
+    }
+    else {
+        console.log("visibility===false")
+        contentTarget.classList.add("invisible")
+    }
+})
+
+eventHub.addEventListener("entryStateChanged", customEvent => {
+    render()
+})
+
+const render = () => {
+    getEntries().then(() => {
+        const allTheEntries = useEntries()
+        contentTarget.innerHTML = allTheEntries.map(
+            currentJournalObject => {
+                return Journal(currentJournalObject)
+            }
+        ).join("")
+    })
+}
 
 const JournalList = () => {
-    console.log("hi")
-
-    // Get a reference to the `<article class="content">` element
-
-    // get the data from the provider
-
-    const journals = useJournalEntries()
     
-    // iterate the array
-    const contentElement = document.querySelector(".journalList")
-
-    for (const journalObject of journals) {
-        //convert each object to HTML representation 
-        contentElement.innerHTML += Journal(journalObject)
-    }
-    
-    // put HTML in DOM 
-  
+    render()
 }
 
 export default JournalList 
