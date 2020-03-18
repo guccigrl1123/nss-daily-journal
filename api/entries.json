@@ -26,14 +26,28 @@
       "Concepts": "flex box ",
       "journalEntry": "i am so pissed ",
       "Mood": "Frustrated",
-      "id": 17
+      "id": 4
     },
     {
       "journalDate": "2020-03-10",
       "Concepts": "sadsfda",
       "journalEntry": "adfads",
       "Mood": "Sad",
-      "id": 18
+      "id": 5
+    },
+    {
+      "journalDate": "2020-03-24",
+      "Concepts": "json server api",
+      "journalEntry": "set up json server api for journal entries",
+      "Mood": "Happy",
+      "id": 6
+    },
+    {
+      "journalDate": "2020-03-17",
+      "Concepts": "dsfda",
+      "journalEntry": "adfdsf",
+      "Mood": "Joyful",
+      "id": 7
     }
   ]
 }
