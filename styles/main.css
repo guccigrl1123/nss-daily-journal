@@ -89,3 +89,30 @@ body, html {
 .invisible {
     display:none;
 }
+
+.button, #hideAllEntries {
+    font-family: "PT Sans";
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .28em;
+    font-weight: 400;
+    font-style: normal;
+    background: #333;
+    color: #fff;
+    border-style: none;
+    padding-top: 1em;
+    padding-right: 1.44em;
+    padding-right: calc(1.44em - .28em);
+    padding-bottom: 1em;
+    padding-left: 1.44em;
+}
+
+h2
+{
+    font-family: "PT Sans";
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: .28em;
+    font-weight: 400;
+    font-style: normal;   
+}

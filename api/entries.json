@@ -2,24 +2,10 @@
   "entries": [
     {
       "id": 1,
-      "journalDate": "07/24/2025",
+      "journalDate": "07/24/2019",
       "Concepts": "HTML & CSS",
       "journalEntry": "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
       "Mood": "Ok"
-    },
-    {
-      "id": 2,
-      "journalDate": "02/26/20",
-      "Concepts": "Git & Github",
-      "journalEntry": "Through the group project Hello, World, we learned how to save and share our code with others.",
-      "Mood": "Frustrated"
-    },
-    {
-      "id": 3,
-      "journalDate": "02/28/20",
-      "Concepts": "Javascript & EventListeners",
-      "journalEntry": "We learned how to automate Event Listeners.",
-      "Mood": "Pretty good"
     },
     {
       "journalDate": "2020-03-03",
@@ -29,13 +15,6 @@
       "id": 4
     },
     {
-      "journalDate": "2020-03-10",
-      "Concepts": "sadsfda",
-      "journalEntry": "adfads",
-      "Mood": "Sad",
-      "id": 5
-    },
-    {
       "journalDate": "2020-03-24",
       "Concepts": "json server api",
       "journalEntry": "set up json server api for journal entries",
@@ -43,11 +22,18 @@
       "id": 6
     },
     {
-      "journalDate": "2020-03-17",
-      "Concepts": "dsfda",
-      "journalEntry": "adfdsf",
-      "Mood": "Joyful",
-      "id": 7
+      "journalDate": "2020-02-27",
+      "Concepts": " Javascript & EventListeners",
+      "journalEntry": "We learned how to automate Event Listeners.",
+      "Mood": "Ok",
+      "id": 8
+    },
+    {
+      "journalDate": "2020-02-12",
+      "Concepts": "Git & Github",
+      "journalEntry": "Through the group project Hello, World, we learned how to save and share our code with others.",
+      "Mood": "Frustrated",
+      "id": 9
     }
   ]
 }
