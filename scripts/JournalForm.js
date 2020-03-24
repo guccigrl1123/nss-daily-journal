@@ -58,10 +58,11 @@ const render = () => {
             <Option>Joyful</Option>
             <Option>Ok</Option>
             <Option>Pissed</Option>
+            <Option>Tired</Option>
     </select>
 </fieldset>
 </form>
-    <button id="recordJournalEntry">Record Journal Entry</button>
+    <button class="button" id="recordJournalEntry">Record Journal Entry</button>
     `
 }
 

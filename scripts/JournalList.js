@@ -1,24 +1,38 @@
 
-import {useJournalEntries, useEntries, getEntries} from "./JournalDataProvider.js"
+import {useJournalEntries, useEntries, getEntries, deleteEntry} from "./JournalDataProvider.js"
 import Journal from "./Journal.js"
 
 
 const contentTarget = document.querySelector(".journalEntries")
 const eventHub = document.querySelector(".container")
 
-    
+eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteNote--")) {
+        const [prefix, id] = clickEvent.target.id.split("--")
+
+        /*
+            Invoke the function that performs the delete operation.
+
+            Once the operation is complete you should THEN invoke
+            useNotes() and render the note list again.
+        */
+       deleteEntry(id).then(
+           () => {
+               const updatedEntries = useEntries()
+               render(updatedEntries)
+           }
+       )
+    }
+})
 
 let visibility = true
 
 eventHub.addEventListener("allEntriesClicked", customEvent => {
     visibility = !visibility
-    console.log("taco")
     if (visibility) {
-        console.log("visibility===true")
         contentTarget.classList.remove("invisible")
     }
     else {
-        console.log("visibility===false")
         contentTarget.classList.add("invisible")
     }
 })
@@ -29,7 +43,7 @@ eventHub.addEventListener("entryStateChanged", customEvent => {
 
 const render = () => {
     getEntries().then(() => {
-        const allTheEntries = useEntries()
+        const allTheEntries = useEntries().reverse()
         contentTarget.innerHTML = allTheEntries.map(
             currentJournalObject => {
                 return Journal(currentJournalObject)
